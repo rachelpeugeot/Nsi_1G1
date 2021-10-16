@@ -9,18 +9,12 @@ def syracuse(n):
             n = n/2
         else:
             n = 3*n+1
-    return s
+    return s, True
 
-def syracuse_verif(n):
-    """syracuse_verif(n) verifie si n suit la suite de syracuse"""
-    while n>1:
-        if n%2 == 0:
-            n = n/2
-        else:
-            n = 3*n+1
-    if n == 1:
-        return True
-    else:
-        return False
+def test_syracuse(n):
+    """test_syracuse(n) verifie syracuse(n) est vrai de o au rang n int"""
+    for i in range (n):
+        if syracuse(n) == False:
+            return False
+    return True
         
-            
